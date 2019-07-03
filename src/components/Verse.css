@@ -1,0 +1,51 @@
+.verse-background {
+    min-height: 100vh;
+    padding-top: 10vh;
+    background: url("http://4.bp.blogspot.com/-p-MYv7vCz9U/UUspNl9_zlI/AAAAAAAAjq8/EiwqDk124fk/s1600/Full+HD+love+Wallpapers+(1).jpg")
+    no-repeat center center fixed
+    rgba(0, 0, 0, 1.0);
+    -webkit-background-size: cover; /* For WebKit*/
+    -moz-background-size: cover; /* Mozilla*/
+    -o-background-size: cover; /* Opera*/
+    background-size: cover; /* Generic*/
+    background-position: 50% 1%;
+}
+
+.verse-container {
+    width: 70vw;
+    height: 80vh;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    overflow: hidden;
+}
+
+.verse-text {
+    width: 100%;
+    height: 80%;
+    padding: 30px 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    border-style: none;
+    border-radius: 20px;
+    background: rgba(20, 20, 20, 0.5);
+    color: white;
+    font-family: "georgia";
+}
+
+.verse-text-fitter {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.verse-location {
+    width: 100%;
+    height: 20%;
+    text-align: right;
+    color: white;
+    font-size: 100%;
+}
