@@ -1,5 +1,5 @@
 import React from 'react';
-import FittedText from "./FittedText";
+import FittedText from "yarft";
 import {
     getBookFromIndex,
     getVerse
