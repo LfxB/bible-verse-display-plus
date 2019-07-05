@@ -2,8 +2,10 @@ import React from 'react';
 import {
     getVersesForChapter
 } from '../../helpers/bibleHelper';
-import { StateContext } from "./../../State"
-import { showVerseWindow } from "./../../modules/verseWindowData"
+import { StateContext } from "./../../State";
+import { showVerseWindow } from "./../../modules/verseWindowData";
+
+import './VerseSelector.css';
 
 export default class VerseSelector extends React.Component {
     onVerseClick = (bookIndex, chapterIndex, verseIndex) => {

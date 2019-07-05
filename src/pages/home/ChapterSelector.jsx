@@ -5,6 +5,8 @@ import {
 import { StateContext } from "./../../State"
 import { selectChapter } from "../../modules/homeIndexData"
 
+import './ChapterSelector.css';
+
 export default class ChapterSelector extends React.Component {
     onChapterChange = (event) => {
         // const [ { homeIndexData }, dispatch ] = this.context;

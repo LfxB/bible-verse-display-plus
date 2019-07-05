@@ -1,0 +1,12 @@
+.home-chapter-select {
+    margin: 50px auto;
+    text-align: center;
+    display: flex;
+    flex-flow: row;
+}
+
+.home-chapter-selector {
+    border-radius: 50px;
+    height: 30px;
+    margin: auto 10px;
+}

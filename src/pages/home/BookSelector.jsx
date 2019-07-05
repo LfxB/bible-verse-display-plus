@@ -2,8 +2,10 @@ import React from 'react';
 import {
     getBookNames
 } from '../../helpers/bibleHelper';
-import { StateContext } from "./../../State"
-import { selectBook } from "../../modules/homeIndexData"
+import { StateContext } from "./../../State";
+import { selectBook } from "../../modules/homeIndexData";
+
+import './BookSelector.css';
 
 export default class BookSelector extends React.Component {
     constructor() {

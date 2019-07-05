@@ -1,0 +1,12 @@
+.home-verses {
+    line-height: 30px;
+}
+
+.home-verse-single:hover {
+    background: rgb(71, 71, 116);
+    color: rgb(255, 255, 255);
+}
+
+.home-verse-single-num {
+    font-weight: 700;
+}
