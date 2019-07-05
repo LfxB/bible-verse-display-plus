@@ -20,8 +20,6 @@
     text-decoration: none;
 }
 
-.navbar-ul li a i {}
-
 li a:hover:not(.navbar-active) {
     background-color: #111;
 }
