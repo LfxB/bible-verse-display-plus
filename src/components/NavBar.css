@@ -1,0 +1,31 @@
+.navbar-ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #343a40;
+    margin-bottom: 30px;
+}
+
+.navbar-ul li {
+    float: left;
+
+}
+
+.navbar-ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar-ul li a i {}
+
+li a:hover:not(.navbar-active) {
+    background-color: #111;
+}
+
+.navbar-active {
+    background-color: rgb(83, 98, 182);
+}
