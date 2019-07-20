@@ -6,6 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import { StateProvider } from './State'
 import homeIndexDataReducer from './modules/homeIndexData'
 import verseWindowDataReducer from './modules/verseWindowData'
+import windowObjReducer from './modules/windowObj'
 
 const initialState = {
   homeIndexData: {
@@ -17,12 +18,14 @@ const initialState = {
     bookIndex: 0,
     chapterIndex: 0,
     verseIndex: 0
-  }
+  },
+  windowObj: undefined
 }
 
-const mainReducer = ({ homeIndexData, verseWindowData }, action) => ({
+const mainReducer = ({ homeIndexData, verseWindowData, windowObj }, action) => ({
   homeIndexData: homeIndexDataReducer(homeIndexData, action),
-  verseWindowData: verseWindowDataReducer(verseWindowData, action)
+  verseWindowData: verseWindowDataReducer(verseWindowData, action),
+  windowObj: windowObjReducer(windowObj, action)
 })
 
 ReactDOM.render(

@@ -4,6 +4,7 @@ import {
 } from '../../helpers/bibleHelper';
 import { StateContext } from "./../../State";
 import { showVerseWindow } from "./../../modules/verseWindowData";
+import { updateWindowObject } from "./../../modules/windowObj"
 
 import './VerseSelector.css';
 
@@ -13,13 +14,16 @@ export default class VerseSelector extends React.Component {
 
         // const [ { homeIndexData }, dispatch ] = this.context;
         
-        const [ { verseWindowData }, dispatch ] = this.context;
+        const [ { verseWindowData, windowObj }, dispatch ] = this.context;
 
         // const dispatch = this.context[1];
         dispatch(showVerseWindow(bookIndex, chapterIndex, verseIndex));
         
-        if (verseWindowData.showVerseWindow)
-            window.open('', 'verse-presenter');
+        if (verseWindowData.showVerseWindow) {
+            // let windowObj = window.open('', 'verse-presenter');
+            // dispatch(updateWindowObject(windowObj));
+            windowObj.focus();
+        }
     }
 
     render = () => {
