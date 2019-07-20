@@ -12,8 +12,14 @@ export default class VerseSelector extends React.Component {
         // window.open("/slide/" + bookIndex + "/" + chapterIndex + "/" + verseIndex, "verse-presenter");
 
         // const [ { homeIndexData }, dispatch ] = this.context;
-        const dispatch = this.context[1];
+        
+        const [ { verseWindowData }, dispatch ] = this.context;
+
+        // const dispatch = this.context[1];
         dispatch(showVerseWindow(bookIndex, chapterIndex, verseIndex));
+        
+        if (verseWindowData.showVerseWindow)
+            window.open('', 'verse-presenter');
     }
 
     render = () => {
