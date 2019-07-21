@@ -6,8 +6,14 @@ import { hideVerseWindow } from "./../../modules/verseWindowData"
 import { updateWindowObject } from "./../../modules/windowObj"
 
 export default class VersePopup extends React.Component {
+    constructor(props) {
+        super(props);
+        this.windowObj = undefined;
+    }
+
     onOpen = (windowObj) => {
         const dispatch = this.context[1];
+        this.windowObj = windowObj;
         dispatch(updateWindowObject(windowObj));
     }
 
@@ -25,7 +31,7 @@ export default class VersePopup extends React.Component {
             onOpen={this.onOpen}
             onUnload={() => dispatch(hideVerseWindow())}
             >
-                <Verse {...{bookIndex, chapterIndex, verseIndex}} />
+                <Verse {...{bookIndex, chapterIndex, verseIndex}} windowObject={this.windowObj} />
             </NewWindow>
         )
     }

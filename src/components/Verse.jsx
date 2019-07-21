@@ -8,19 +8,19 @@ import {
 import './Verse.css'
 
 export default class Verse extends React.Component {
-    verseInfo = (bookIndex, chapterIndex, verseIndex) => {
+    verseInfo = (bookIndex, chapterIndex, verseIndex, windowObject) => {
         const bookName = getBookFromIndex(bookIndex);
 
         return (
             <div className="verse-location">
-                <FittedText defaultFontSize={50}>
+                <FittedText defaultFontSize={50} windowObject={windowObject}>
                     {" — " + bookName + " " + (parseInt(chapterIndex) + 1) + " : " + (parseInt(verseIndex) + 1)}
                 </FittedText>
             </div>)
     }
 
     render = () => {
-        let { bookIndex, chapterIndex, verseIndex } = this.props;
+        let { bookIndex, chapterIndex, verseIndex, windowObject } = this.props;
 
         if (this.props.match) {
              ({ bookIndex, chapterIndex, verseIndex } = this.props.match.params);
@@ -31,12 +31,12 @@ export default class Verse extends React.Component {
             <div className="verse-container">
                 <div className="verse-text">
                     <div className="verse-text-fitter">
-                        <FittedText>
+                        <FittedText windowObject={windowObject}>
                             {getVerse(bookIndex, chapterIndex, verseIndex).text}
                         </FittedText>
                     </div>
                 </div>
-                {this.verseInfo(bookIndex, chapterIndex, verseIndex)}
+                {this.verseInfo(bookIndex, chapterIndex, verseIndex, windowObject)}
             </div>
         </div>
         )
