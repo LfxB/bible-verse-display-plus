@@ -4,7 +4,6 @@ import {
 } from '../../helpers/bibleHelper';
 import { StateContext } from "./../../State";
 import { showVerseWindow } from "./../../modules/verseWindowData";
-import { updateWindowObject } from "./../../modules/windowObj"
 
 import './VerseSelector.css';
 

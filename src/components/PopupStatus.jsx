@@ -1,6 +1,5 @@
 import React from 'react';
 import { StateContext } from "../State"
-import { hideVerseWindow } from "../modules/verseWindowData"
 import { getBookFromIndex } from "../helpers/bibleHelper"
 
 import "./PopupStatus.css"
