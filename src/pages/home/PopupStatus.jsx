@@ -1,6 +1,6 @@
 import React from 'react';
-import { StateContext } from "../State"
-import { getBookFromIndex } from "../helpers/bibleHelper"
+import { StateContext } from "../../State"
+import { getBookFromIndex } from "../../helpers/bibleHelper"
 
 import "./PopupStatus.css"
 
