@@ -12,6 +12,12 @@ const reducer = (state, action) => {
                 ...state,
                 chapterIndex: action.chapterIndex
             }
+        case "selectBookAndChapter":
+                return {
+                    ...state,
+                    bookIndex: action.bookIndex,
+                    chapterIndex: action.chapterIndex
+                }
         default:
             return state;
     }
@@ -28,6 +34,14 @@ export const selectBook = (bookIndex) => {
 export const selectChapter = (chapterIndex) => {
     return {
         type: "selectChapter",
+        chapterIndex
+    }
+}
+
+export const selectBookAndChapter = (bookIndex, chapterIndex) => {
+    return {
+        type: "selectBookAndChapter",
+        bookIndex,
         chapterIndex
     }
 }
