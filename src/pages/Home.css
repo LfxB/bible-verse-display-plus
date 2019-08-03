@@ -18,10 +18,6 @@
     padding-right: 25px;
 }
 
-.home-right > * {
+.home-right > *:not(:first-child) {
     margin-top: 30px;
-}
-
-.home-right > *:first-child {
-    margin-top: 0px;
 }

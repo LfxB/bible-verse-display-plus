@@ -10,3 +10,8 @@
 .history-container p {
     font-weight: 400;
 }
+
+.history-container p:hover {
+    font-weight: 500;
+    cursor: pointer;
+}
