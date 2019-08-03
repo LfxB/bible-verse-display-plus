@@ -1,12 +1,14 @@
 import React from 'react';
 import { StateContext } from "../../State"
 import { getBookFromIndex } from "../../helpers/bibleHelper"
+import { selectBookAndChapter } from "../../modules/homeIndexData"
 
 import "./History.css"
 
 export default class History extends React.Component {
-    onVerseClick = (event) => {
-        console.log("HI!!");
+    onVerseClick = (bookIndex, chapterIndex) => {
+        const dispatch = this.context[1];
+        dispatch(selectBookAndChapter(bookIndex, chapterIndex));
     }
 
     render = () => {
@@ -19,7 +21,7 @@ export default class History extends React.Component {
                 {history.map((item, key) => {
                     return <p
                     key={key}
-                    // onClick={this.onVerseClick}
+                    onClick={() => this.onVerseClick(item.bookIndex, item.chapterIndex)}
                     >
                         {
                         getBookFromIndex(item.bookIndex) + " "

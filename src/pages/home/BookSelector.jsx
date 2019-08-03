@@ -1,5 +1,5 @@
 import React from "react";
-import { getBookNames } from "../../helpers/bibleHelper";
+import { getBookNames, getBookFromIndex } from "../../helpers/bibleHelper";
 import { StateContext } from "./../../State";
 import { selectBook } from "../../modules/homeIndexData";
 
@@ -88,6 +88,20 @@ export default class BookSelector extends React.Component {
       </div>
     );
   };
+
+  componentDidUpdate = () => {
+    const [ { homeIndexData } ] = this.context;
+    const bookName = getBookFromIndex(homeIndexData.bookIndex);
+
+    if (bookName === this.state.persistentBookName) return;
+
+    console.log("Book change!");
+    this.setState({
+      searchInput: bookName,
+      searchInputFocus: false,
+      persistentBookName: bookName
+    })
+  }
 
   render = () => {
     const { searchInput } = this.state;
