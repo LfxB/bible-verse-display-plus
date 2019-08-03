@@ -95,7 +95,6 @@ export default class BookSelector extends React.Component {
 
     if (bookName === this.state.persistentBookName) return;
 
-    console.log("Book change!");
     this.setState({
       searchInput: bookName,
       searchInputFocus: false,
