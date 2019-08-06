@@ -14,7 +14,18 @@ export default class History extends React.Component {
     render = () => {
         const [ { history } ] = this.context;
 
-        if (!history.length) return null;
+        if (!history.length) {
+            return (
+                <div className="history-instructions">
+                    <h3>Instructions</h3>
+                    <ul>
+                        <li>You can search by book! Just click the book name and start typing.</li>
+                        <li>Click a verse to open a new window which you can drag to a secondary monitor/projector.</li>
+                        <li>Your previously viewed verses will appear here; click them to navigate back to them.</li>
+                    </ul>
+                </div>
+            )
+        }
 
         return (
             <div className="history-container">
