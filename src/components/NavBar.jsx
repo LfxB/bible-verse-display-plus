@@ -12,7 +12,6 @@ export default class NavBar extends React.Component {
     }
 
     toggleResponsiveMenu = () => {
-        console.log("yo");
         const { navbarClassName } = this.state;
         if (navbarClassName === "navbar-ul") {
             this.setState({
