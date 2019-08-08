@@ -11,3 +11,14 @@
 .popup-status span {
     font-weight: 500;
 }
+
+/* Below 1200 pixels */
+@media only screen and (max-width: 1199px) {
+    .popup-status {
+        display: none;
+    }
+
+    .popup-status span {
+        display: none;
+    }
+}

@@ -29,18 +29,20 @@ export default class History extends React.Component {
 
         return (
             <div className="history-container">
-                {history.map((item, key) => {
-                    return <p
-                    key={key}
-                    onClick={() => this.onVerseClick(item.bookIndex, item.chapterIndex)}
-                    >
-                        {
-                        getBookFromIndex(item.bookIndex) + " "
-                        + (item.chapterIndex + 1).toString() + ":"
-                        + (item.verseIndex + 1).toString()
-                        }
-                    </p>
-                })}
+                <div className="history-items custom-scrollbar">
+                    {history.map((item, key) => {
+                        return <p
+                        key={key}
+                        onClick={() => this.onVerseClick(item.bookIndex, item.chapterIndex)}
+                        >
+                            {
+                            getBookFromIndex(item.bookIndex) + " "
+                            + (item.chapterIndex + 1).toString() + ":"
+                            + (item.verseIndex + 1).toString()
+                            }
+                        </p>
+                    })}
+                </div>
             </div>
         )
     }

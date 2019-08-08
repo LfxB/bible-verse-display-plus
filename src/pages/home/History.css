@@ -1,13 +1,3 @@
-.history-container {
-    height: 100%;
-    text-align: center;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 15px;
-    border-color: rgb(50, 71, 187);
-    color: rgb(50, 71, 187);
-}
-
 .history-container p {
     font-weight: 400;
 }
@@ -18,9 +8,12 @@
 }
 
 .history-instructions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background: #343a40;
     color: white;
-    width: 100%;
     height: 100%;
     border-style: solid;
     border-width: 1px;
@@ -30,4 +23,87 @@
 
 .history-instructions h3 {
     text-align: center;
+}
+
+.history-instructions ul {
+    padding: 0 0 0 20px;
+}
+
+@media only screen and (max-width: 599px) {
+    .history-instructions {
+        font-size: 12px;
+        width: 100%;
+    }
+
+    .history-instructions h3 {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .history-instructions {
+        width: 70%;
+    }
+}
+
+/* Below 1200 pixels */
+@media only screen and (max-width: 1199px) {
+    .history-container {
+        height: 100%;
+        overflow-y: hidden;
+    }
+
+    .history-items {
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: flex-start;
+        overflow-y: auto;
+    }
+
+    .history-container p {
+        min-height: 20px;
+        width: auto;
+        padding: 2px 4px;
+        margin: 5px;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 5px;
+        border-color: rgb(83, 98, 182);
+        background: rgb(83, 98, 182);
+        color: rgb(255, 255, 255);
+    }
+
+    .history-instructions {
+        margin: 0 auto;
+        overflow: visible;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .history-container {
+        position: absolute;
+        height: calc(100% - 200px);
+        width: 100%;
+        overflow-y: hidden;
+        text-align: center;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 8px;
+        border-color: rgb(50, 71, 187);
+        color: rgb(50, 71, 187);
+    }
+
+    .history-items {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    .history-instructions {
+        width: 100%;
+        height: fit-content;
+    }
 }
